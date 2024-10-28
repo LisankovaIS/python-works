@@ -6,7 +6,7 @@ increase = 0.05  # Ежемесячный рост цен
 # TODO Посчитайте количество  месяцев, которое можно протянуть без долгов
 allmoney = money_capital-spend
 months = 0
-while money_capital > 0:
+while allmoney > 0:
     allmoney = allmoney + salary - spend
     spend = spend + spend*increase
     months += 1
