@@ -1,16 +1,8 @@
 # TODO Напишите функцию для поиска индекса товара
-
-
 def find_index(spisok, tovar):
-    index = 0
-    if tovar in items_list:
-        k=0
-        while items_list[k] != tovar:
-            k+=1
-            index+=1
-        return index
-    else:
-        return None
+    for index, i in enumerate(spisok):
+        if i == tovar:
+            return index
 
 items_list = ['яблоко', 'банан', 'апельсин', 'груша', 'киви', 'банан']
 
@@ -20,3 +12,4 @@ for find_item in ['банан', 'груша', 'персик']:
         print(f"Первое вхождение товара '{find_item}' имеет индекс {index_item}.")
     else:
         print(f"Товар '{find_item}' не найден в списке.")
+        
